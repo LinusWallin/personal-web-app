@@ -1,3 +1,7 @@
+import elmhillsKennelImg from '../assets/projects/elmhills-kennel.png'
+import flowerFieldImg from '../assets/projects/flower-field.png'
+import commanderCounterImg from '../assets/projects/commander-counter.png'
+
 export const profile = {
   name: 'Linus Wallin',
   title: "Computer Science Master's Student @ KTH",
@@ -27,23 +31,13 @@ export const skills = [
 
 export const projects = [
   {
-    id: 'dh2642-flower-app',
-    title: 'DH2642 — Interaction Programming and the Dynamic Web',
-    description:
-      'Course project built with a team of four: a website where users create an account and store images of flowers, which are identified via an external API.',
-    tech: ['Vue', 'HTML', 'JavaScript', 'CSS'],
-    image: null,
-    link: null,
-    linkLabel: 'Visit site',
-  },
-  {
     id: 'elmhills-kennel',
     title: 'Website for Elmhills Kennel',
     description:
       "Designed and built a website for my mother's and sister's dog kennel, showcasing their dogs and litters.",
     tech: ['React', 'JavaScript', 'CSS'],
-    image: null,
-    link: null,
+    image: elmhillsKennelImg,
+    link: "https://elmhillskennel.se/",
     linkLabel: 'Visit site',
   },
   {
@@ -51,20 +45,30 @@ export const projects = [
     title: 'Android Application — MTG Life Tracker',
     description:
       'A simple Android app for tracking life totals and other game mechanics for the card game Magic the Gathering.',
-    tech: ['Android'],
-    image: null,
-    link: null,
+    tech: ['Android', 'Kotlin'],
+    image: commanderCounterImg,
+    link: "https://github.com/LinusWallin/CommanderCounter",
     linkLabel: 'View on GitHub',
   },
   {
     id: 'go-htmx-tournament',
     title: 'Go + HTMX Tournament App (Ongoing)',
     description:
-      'Building the MVP of a tournament management web application with a friend, aiming to make it easier for individuals to create and manage tournaments.',
-    tech: ['Go', 'HTMX'],
+      'Currently working on the MVP of a tournament management web application with a friend, aiming to make it easier for individuals to create and manage tournaments.',
+    tech: ['Go', 'HTMX', 'MySQL'],
     image: null,
-    link: null,
+    link: "https://gitlab.com/ginger-jesus-and-rhino/tournament-tracker",
     linkLabel: 'View on GitLab',
+  },
+  {
+    id: 'dh2642-flower-app',
+    title: 'DH2642 — Interaction Programming and the Dynamic Web',
+    description:
+      'Course project built with a team of four: a website where users create an account and store images of flowers, which are identified via an external API.',
+    tech: ['Vue', 'HTML', 'JavaScript', 'CSS'],
+    image: flowerFieldImg,
+    link: "https://dh2642-flowerfield.web.app/#/",
+    linkLabel: 'Visit site',
   },
 ];
 
