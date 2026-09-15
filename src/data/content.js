@@ -6,7 +6,7 @@ export const profile = {
   email: 'linus.wallin00@gmail.com',
   phone: '+46 76 301 96 84',
   showPhone: false,
-  linkedinUrl: null,
+  linkedinUrl: 'https://www.linkedin.com/in/linus-wallin-30871b235/',
   githubUrl: null,
 };
 
