@@ -6,25 +6,25 @@ export const profile = {
   name: 'Linus Wallin',
   title: "Computer Science Master's Student @ KTH",
   summary:
-    'Computer Science student passionate about data visualization, programming, and application development. Driven by a strong work ethic, attention to detail, and a commitment to developing impactful solutions.',
+    'Computer Science student passionate about full-stack development and building things end-to-end. Curious, adaptable across languages and frameworks, and committed to writing clean, maintainable code.',
   email: 'linus.wallin00@gmail.com',
-  phone: '+46 76 301 96 84',
+  phone: '',
   showPhone: false,
   linkedinUrl: 'https://www.linkedin.com/in/linus-wallin-30871b235/',
-  githubUrl: null,
+  githubUrl: "https://github.com/LinusWallin",
 };
 
 export const skills = [
   {
-    category: 'Languages & Tools',
-    items: ['Python', 'C#', 'Go', 'JavaScript', 'React'],
+    category: 'Programming Languages & Tools',
+    items: ['Python', 'C#', 'Go', 'JavaScript', 'React', 'Git'],
   },
   {
     category: 'Practices',
     items: ['Version Control and CI', 'Communication and team collaboration', 'Curious'],
   },
   {
-    category: 'Spoken Languages',
+    category: 'Languages',
     items: ['Swedish', 'English', 'Finnish'],
   },
 ];
