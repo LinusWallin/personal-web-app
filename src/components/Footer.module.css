@@ -1,0 +1,41 @@
+.footer {
+  border-top: 1px solid var(--color-border);
+  margin-top: 2rem;
+}
+
+.inner {
+  text-align: center;
+}
+
+.blurb {
+  margin-top: 0.75rem;
+  color: var(--color-text-muted);
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.link {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 2.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
