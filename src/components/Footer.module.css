@@ -23,15 +23,26 @@
   gap: 1.25rem;
 }
 
-.link {
-  color: var(--color-accent);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
+.iconLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-alt);
+  color: var(--color-text);
+  transition: color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
 }
 
-.link:hover {
-  text-decoration: underline;
+.iconLink:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.iconLink:active {
+  transform: scale(0.94);
 }
 
 .copyright {

@@ -1,4 +1,5 @@
 import { profile } from '../data/content.js';
+import { MailIcon, PhoneIcon, LinkedInIcon, GitHubIcon } from './icons.jsx';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -12,30 +13,46 @@ export default function Footer() {
           I'm always happy to talk about new opportunities, collaborations, or just tech in general.
         </p>
         <div className={styles.links}>
-          <a className={styles.link} href={`mailto:${profile.email}`}>
-            {profile.email}
+          <a
+            className={styles.iconLink}
+            href={`mailto:${profile.email}`}
+            aria-label="Email me"
+            title="Email me"
+          >
+            <MailIcon />
           </a>
           {profile.showPhone && profile.phone && (
-            <span className={styles.link}>{profile.phone}</span>
+            <a
+              className={styles.iconLink}
+              href={`tel:${profile.phone.replace(/\s+/g, '')}`}
+              aria-label="Call me"
+              title={profile.phone}
+            >
+              <PhoneIcon />
+            </a>
           )}
           {profile.linkedinUrl && (
             <a
-              className={styles.link}
+              className={styles.iconLink}
               href={profile.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
             >
-              LinkedIn
+              <LinkedInIcon />
             </a>
           )}
           {profile.githubUrl && (
             <a
-              className={styles.link}
+              className={styles.iconLink}
               href={profile.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
             >
-              GitHub
+              <GitHubIcon />
             </a>
           )}
         </div>
