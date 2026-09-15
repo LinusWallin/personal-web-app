@@ -1,4 +1,4 @@
-import { profile } from '../data/content.js';
+import { useActiveSection } from '../hooks/useActiveSection.js';
 import ThemeToggle from './ThemeToggle.jsx';
 import styles from './Header.module.css';
 
@@ -10,19 +10,28 @@ const NAV_LINKS = [
   { href: '#contact', label: 'Contact' },
 ];
 
+const SECTION_IDS = NAV_LINKS.map((link) => link.href.slice(1));
+
 export default function Header() {
+  const activeId = useActiveSection(SECTION_IDS);
+
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <a href="#top" className={styles.name}>
-          {profile.name}
-        </a>
         <nav className={styles.nav} aria-label="Section navigation">
-          {NAV_LINKS.map((link) => (
-            <a key={link.href} href={link.href} className={styles.navLink}>
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = link.href === `#${activeId}`;
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}
+                aria-current={isActive ? 'true' : undefined}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </nav>
         <ThemeToggle />
       </div>
