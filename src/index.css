@@ -80,9 +80,15 @@ button {
 }
 
 .sectionTitle {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
+}
+
+.verticalSectionTitle{
+  font-size: 2.5rem;
+  font-weight: 700;
+  writing-mode: sideways-lr;
 }
 
 @media (max-width: 640px) {

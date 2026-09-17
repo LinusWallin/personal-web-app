@@ -1,5 +1,55 @@
-.grid {
+.projects {
+  padding-bottom: 4rem;
+}
+
+.projects :global(.section) {
+  padding-bottom: 0;
+}
+
+.desktopHeading {
+  display: none;
+}
+
+.pin {
+  overflow: hidden;
+}
+
+.track {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .pin {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .track {
+    display: flex;
+    max-width: none;
+    margin: 0;
+    padding: 0 1.5rem 0 max(1.5rem, calc((100vw - var(--max-width)) / 2));
+    will-change: transform;
+  }
+
+  .trackItem {
+    flex: 0 0 clamp(320px, 60vw, 720px);
+  }
+
+  .mobileHeading {
+    display: none;
+  }
+
+  .desktopHeading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+  }
 }
