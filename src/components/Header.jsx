@@ -12,7 +12,7 @@ const NAV_LINKS = [
 
 const SECTION_IDS = NAV_LINKS.map((link) => link.href.slice(1));
 
-export default function Header() {
+export default function Header({ theme, toggleTheme }) {
   const activeId = useActiveSection(SECTION_IDS);
 
   return (
@@ -33,7 +33,7 @@ export default function Header() {
             );
           })}
         </nav>
-        <ThemeToggle />
+        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
       </div>
     </header>
   );

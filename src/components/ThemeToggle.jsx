@@ -1,8 +1,6 @@
-import { useTheme } from '../hooks/useTheme.js';
 import styles from './ThemeToggle.module.css';
 
-export default function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
+export default function ThemeToggle({ theme, toggleTheme }) {
   const isDark = theme === 'dark';
 
   return (
